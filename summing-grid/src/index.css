@@ -3,3 +3,51 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.App {
+  width: 100%;
+  margin: 20px auto;
+}
+
+.Grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+
+.GridItem {
+  width: 25vw;
+  height: 100px;
+  line-height: 100px; /* Vertically centers content */
+}
+
+input {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+
+  /* Undo default browser styling */
+  font-size: 1em;
+  text-align: inherit;
+  margin: 0;
+  border: none;
+}
+
+@media (max-width: 359px) {
+  .Grid {
+    width: 25vw;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 719px) {
+  .Grid {
+    width: 50vw;
+  }
+}
+
+@media (min-width: 720px) {
+  .Grid {
+    flex-wrap: nowrap;
+  }
+}
