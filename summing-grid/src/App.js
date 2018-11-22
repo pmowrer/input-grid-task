@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import { toPrecision3 } from './utils';
 
 class App extends Component {
   constructor() {
@@ -46,7 +47,7 @@ class App extends Component {
             </div>
           ))}
           <div className="GridItem">
-            <span>{this.sum}</span>
+            <span>{toPrecision3(this.sum)}</span>
           </div>
         </div>
       </div>
